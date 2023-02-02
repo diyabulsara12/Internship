@@ -26,10 +26,10 @@ let s=date.getSeconds();
 if(h>12)
 {
     h=h-12;
-    document.write(h +" " +"PM : "+m+" : "+s)
+    document.write("current time is "+h +" " +"PM : "+m+" : "+s+"<br>")
 }
 else{
-    document.write(h +"AM : "+m+" : "+s)
+    document.write("current time is "+h +"AM : "+m+" : "+s+"<br>")
 }
 //square root of given number
 let b;
@@ -37,17 +37,17 @@ function square(b)
 {
     return Math.sqrt(b);
 }
-document.write(square(4)+"<br>");
+document.write("sqaure root of 4 is "+square(4)+"<br>");
 let firstNum;
 let secondNum;
 function maximum(firstNum,secondNum)
 {
     return Math.max(firstNum,secondNum)
 }
-document.write(maximum(4,5)+"<br>");
+document.write("Maximum is "+maximum(4,5)+"<br>");
 // Random Number Generator
 let z=10;
-document.write(Math.random()*z+"<br>");
+document.write("Random number is "+Math.random()*z+"<br>");
  
 //  given number is greater or not
 let number=700;
