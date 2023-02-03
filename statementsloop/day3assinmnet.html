@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        let movie=[
+            {"title":"ghgyh","director":"rajkumar","wathedyet":true}
+            ,{"title":"pk","director":"rajkumar","wathedyet":false}];
+        for(const i of movie)
+        {
+         //   document.write(typeof i);
+            for (const key in i) {
+           document.write(key+" "+i[key]+"<br>");
+            }
+        }
+        let a=70;
+        switch(true){
+            case a>=90 :
+                document.write("Grade A");
+                break;
+            case a==80 &&  a<=89 :
+                document.write("Grade B");
+                break;
+            case a==70 &&  a<=79 :
+                document.write("Grade C");
+                break;
+            case a==60 &&  a<69 :
+                document.write("Grade D");
+                break;
+            
+            default :
+                document.write(" Fail");
+        }
+         function addArray(arr)
+         {
+            let sum=0;
+            for(let i=0;i<arr.length;i++)
+            {
+
+                sum+=arr[i];
+            }
+            document.write(sum);
+            return sum;
+         }
+         addArray([2,5,0,7,4,1,3,0,2,5,0,1,3,1]);
+      
+    </script>
+</body>
+</html>

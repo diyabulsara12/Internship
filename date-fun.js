@@ -37,7 +37,9 @@ function square(b)
 {
     return Math.sqrt(b);
 }
+document.write(square(9)+"<br>");
 document.write("sqaure root of 4 is "+square(4)+"<br>");
+
 let firstNum;
 let secondNum;
 function maximum(firstNum,secondNum)
