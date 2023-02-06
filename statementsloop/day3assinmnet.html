@@ -9,15 +9,52 @@
 <body>
     <script> 
         let movie=[
-            {"title":"ghgyh","director":"rajkumar","wathedyet":true}
-            ,{"title":"pk","director":"rajkumar","wathedyet":false}];
-        for(const i of movie)
+            {"title":"pk","director":"rajkumar","watchedyet":true}
+            ,{"title":"Intersteller","director":"Christopher nolan","watchedyet":false},
+            {"title":"Golmal","director":"Rohit shetty","watchedyet":true},
+            {"title":"Iron Man","director":" Jon Favreau","watchedyet":true},
+            {"title":"Black adom","director":"","watchedyet":false}
+        
+        ];
+        for (let i = 0; i <movie.length; i++) {
+            if(movie[i]["watchedyet"]==true)
         {
-         //   document.write(typeof i);
-            for (const key in i) {
-           document.write(key+" "+i[key]+"<br>");
-            }
+            console.log(movie[i].title);
         }
+        else{
+            console.log(movie[i].title+" is are not watched")
+        }
+     
+            
+        };
+        let movie1=[
+            {title:"pk1",director:"rajkumar",watchedyet:true},//movie1[1]
+            {title:"pk",director:"rajkumar",watchedyet:false},
+            {title:"pk2",director:"rajkumar",watchedyet:true},
+            {title:"pk",director:"rajkumar",watchedyet:false}
+    
+        ];
+         for (let i = 0; i < movie1.length; i++) {
+                     console.log(movie1[i]);
+                    if (movie1[i].watchedyet==true) {
+                        console.log(movie1[i].title);
+                        
+                    }
+
+         }
+         let movie2=
+            {title:"pk1",director:"rajkumar",watchedyet:true};
+            console.log(movie2['director']);
+            console.log(movie2.director);
+            console.log();
+
+
+
+             let arr1=[1,2,3,4,5]
+             let arr2=[7,8,9]
+             let arr3=[ ...arr1,5,...arr2];
+            console.log(arr3);
+
         let a=70;
         switch(true){
             case a>=90 :
@@ -44,7 +81,7 @@
 
                 sum+=arr[i];
             }
-            document.write(sum);
+            document.write("sum of array is"+sum);
             return sum;
          }
          addArray([2,5,0,7,4,1,3,0,2,5,0,1,3,1]);

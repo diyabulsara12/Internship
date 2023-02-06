@@ -8,56 +8,59 @@
   </head>
   <body>
     <script>
-      // // Armstrongnumber
-      // let number=120;
-      // sum=0;
-      // temp=number;
-      // while(temp>0)
-      // {
-      //     let x=temp%10;
-      //     sum+=x*x*x;
-      //     temp=parseInt(temp/10);
-      // }
-      // if(sum==number){
-      //     document.write("number is armstrong");
-      // }
-      // else{
-      //     document.write("Number is not armstrong");
-      // }
+      // Armstrongnumber
+      let number=120;
+      sum=0;
+      temp=number;
+      while(temp>0)
+      {
+          let x=temp%10;
+          sum+=x*x*x;
+          temp=parseInt(temp/10);
+      }
+      if(sum==number){
+          document.write("number is armstrong");
+      }
+      else{
+          document.write("Number is not armstrong");
+      }
 
       //  String reverse
 
-      //     let s="level";
-      //     let slen=s.length;
-      //     let rev="";
-      //    for (let i = slen - 1; i >= 0; i--) {
-      //     rev+=(s[i]);
-      //    }
-      //     console.log(`${s} Reverse order is ${rev}`);
+          var s="level";
+          var slen=s.length;
+          var rev="";
+         for (let i = slen - 1; i >= 0; i--) {
+          rev+=(s[i]);
+         }
+          console.log(`${s} Reverse order is ${rev}`);
       //  palindrome string
-      //     let s="level";
-      //     let slen=s.length;
-      //     let rev="";
-      //    for (let i = slen - 1; i >= 0; i--) {
-      //     rev+=(s[i]);
-      //    }
-      //    if (s==rev){
-      //     document.write("string is palindrome");
-      //    }
-      //    else{
-      //     document.write("strng is not palindrom");
-      //    }
-      //    console.log(`${s} Reverse order is ${rev}`);
-      //     function reverseString() {
-      //      let res = "";
-      //      let  s="diya";
+          var s="level";
+          var slen=s.length;
+          var rev="";
+         for (let i = slen - 1; i >= 0; i--) {
+          rev+=(s[i]);
+         }
+         if (s==rev){
+          document.write("string is palindrome");
+         }
+         else{
+          document.write("strng is not palindrom");
+         }
+         console.log(`${s} Reverse order is ${rev}`);
+          // reverse string with function
+         
+         function reverseString(s) {
+           let res = "";
+            // let  s="diya";
 
-      //    for (let i = s.length - 1; i >= 0; i--) {
-      //        res = res + s.charAt(i);
-      //    }
-      //    return console.log(res);
-      // }
-      // reverseString();
+         for (let i = s.length - 1; i >= 0; i--) {
+             res = res + s.charAt(i);
+         }
+         return console.log(res);
+      }
+      var xyz="nupur";
+      reverseString(xyz);
       // prime number
       let p = 4;
       let flag = 0;
@@ -70,7 +73,7 @@
       if (flag == 0) {
         document.write("number is prime");
       }
-    //   let day = ;
+    //  switch case
       let exp = new Date().getDay();
       console.log(exp);
       switch (exp) {

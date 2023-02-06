@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // convert string to object
+        var strobj='{"name":"John", "age":30, "car":null}';
+         let obj1=JSON.parse(strobj);
+         console.log(obj1);
+         document.write(typeof(obj1));
+        //  convert object to string
+             
+        var obj2= {"name":"John", "age":30, "car":null};
+        let str2=JSON.stringify(obj2);
+        console.log(str2); 
+        document.write(typeof(str2)); 
+
+    // check if two objects have same values.
+     var x =   {"name":"John", "age":30, "car":null};
+     var y =   {"name":"John", "age":30, "car":null};
+     console.log(x==y)
+     console.log(JSON.stringify(x)===JSON.stringify(y));
+    </script>
+    
+</body>
+</html>
