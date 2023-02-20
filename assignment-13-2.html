@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function vowels(str){
+            let count=0;
+            let a=[];
+            for (let i = 0; i < str.length; i++) {
+            //  console.log(str[i]);
+            if(str[i]=='a' || str[i]=="u")
+             
+                a.push(str[i]);
+            }
+            return a;
+        }
+        let str=vowels("Nupur");
+        console.log(str);
+function abc(){
+    return arguments.callee.name;
+}
+ console.log(abc());
+ function longestname(a){
+    return a.reduce((a,b)=> a.length > b.length ? a : b )
+ }
+ let oooo=["Gujarat","maharashtra","Jammu-kashmir"];
+
+ console.log(longestname(oooo));
+    </script>
+</body>
+</html>

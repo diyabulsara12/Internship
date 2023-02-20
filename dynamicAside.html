@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .aside{
+            display: flex;
+            background-color: aqua;
+        }
+        .link{
+            text-decoration: none;
+
+        }
+        .ul{
+            list-style-type: none;
+        }
+ 
+    </style>
+</head>
+<body>
+    <script>
+         asided=[
+            {"name":"Home","link":"https://www.w3schools.com"},
+            {"name":"About-us" ,"link":"https://www.w3schools.com/"},
+            {"name":"contat-us" ,"link":"https://www.w3schools.com/"}
+         ];
+         let aside=document.createElement("div");
+         aside.className="aside";
+     
+         console.log(aside);
+         function sidebar(aside,asided)
+         {
+            let ul=document.createElement("ul");
+            ul.className="ul";
+            aside.appendChild(ul);
+            for (const iterator of asided) {
+                let li=document.createElement("li");
+                
+                ul.appendChild(li);
+                let a=document.createElement("a");
+                a.className="link";
+                li.appendChild(a);
+                let text=document.createTextNode(iterator.name);
+                a.appendChild(text);
+                a.setAttribute("href",iterator.link);
+            }
+         }
+         sidebar(aside,asided);
+          let body=document.querySelector("body");
+          body.appendChild(aside);
+          
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let object1 = {
+      //   name: "Diya",
+      //   surname: "Bulsara",
+      //   add: "Valsad",
+      //   setFirstName: function (a) {
+      //     this.name = a;
+      //   },
+      //   fullname: function () {
+      //     return `${this.name} ${object1.surname}`;
+      //   },
+
+        //latest features Es6 getter and setter
+      //   set setLastname(b) {
+      //     try {
+      //       if (typeof(b)=='string') {
+      //           alert(b) 
+      //       } else {
+      //           throw "enter Valid input"
+      //       }
+      //     } catch (error) {
+      //       alert(error)
+      //     }
+      //   },
+      //   set fullname1(a) {
+      //    try {
+      //       let b=a.split(" ");
+      //       if(b.length==2){
+      //           this.name=b[0];
+      //           this.surname=b[1];
+      //           throw `${this.name} ${object1.surname}`;
+      //       }
+      //       else{
+      //           throw "enter valid input";
+      //       }
+      //    } catch (e) {
+      //       alert(e)
+      //    }
+      //   },
+      // };
+      // object1.setFirstName("viren");
+      // object1.setLastname('patel');
+      // object1.fullname1 = "diya bulsara";
+      // // console.log(object1);
+      // console.log(object1.fullname1);
+      // var a =5;
+      // let obj2 = {};
+      // // obj2.xyz=2;
+      // console.log(object1);
+      // console.log(object1.name);
+      // //  debugger
+      // for (const key in object1) {
+      //   //    debugger
+      //   obj2[object1[key]] = key;
+      // }
+      // console.log(obj2);
+      // most frequent item of array
+        const arr1=[1,2,3,4,5,4,4,4,6,7,8]
+        function mostFreequent(arr1){
+          const frequentelement={};
+          maxElement=arr1[0];
+          maxcount=1;
+          for(let i=0;i<arr1.length;i++){
+           const Element=arr1[i];
+           if(frequentelement[Element]){
+            frequentelement[Element]++
+           }
+           else{
+            frequentelement[Element]=1
+           }
+           if(frequentelement[Element]>maxcount){
+            maxElement=Element;
+            maxcount=frequentelement[Element];
+
+           }
+          }
+          return maxElement;
+        }
+        console.log(mostFreequent(arr1));
+        // //  Remove duplicate value from array
+        // let arr2=[1,2,4,5,5,5];
+        // var a=new Set(arr2);
+        // console.log(a);
+        
+      // // merge two array and remove duplicate array
+      // let arr3=[1,2,3,4]
+      // let  arr4=[4,5,6,3]
+      // let arr5=arr3.concat(arr4);
+      // console.log(arr5);
+      // var b=new Set(arr5);
+      // console.log(b);
+      
+      // // remove specific Element from array
+      //  let array1=[3,4,5,6,7,6];
+      //  array1.splice(2,1);
+      //  console.log(array1);
+
+      // //  filter the Element 
+      //  let array2=[58,'','abcd',true,null,false,0]
+      //  let array3= array2.filter((value )=>{ value!==false && value!==null && value!==0 && value!==''
+      //  return value}
+      //  );
+      //  console.log(array3);
+      
+      // //  random item from array
+      // array4=[1,2,3,4,5,6,7,8,9,10]
+      // let randomele= Math.random() * array4.length;
+      // console.log(randomele);
+      // for(let i=0;i<array4.length;i++)
+      // {
+      //   if(i%2==0){
+      //     console.log(array4[i]);
+      //   }
+      // }
+      function sumOne(a,b){
+        return a+b;
+      }
+      arr2=[2,4]
+      console.log(sumOne(...arr2));
+       
+      function sum(...args){
+        let sum=0;
+        for (const arg of args) {
+           sum+= arg;
+        }
+        return sum;
+      }
+      console.log(sum(1,2,3,4,));
+       
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

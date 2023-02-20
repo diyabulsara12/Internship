@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // foreach
+         const number=[1,2,3,4,5,6,8];
+        //  number.forEach((item,index,arr) => {console.log('a['+index+']='+item)});
+         number.forEach((item,index,arr) => {console.log(`a [${index}] = ${item}`)});
+         number.forEach;
+         console.log(number);
+         let sum=0;
+         number.forEach(item => {
+            sum += item  
+         });
+         console.log(sum);
+         count={};
+         const letters=['a','b','a','d','a']
+         letters.forEach(item => {
+            if(count[item]){
+                count[item]++;
+            }
+            else{
+                count[item]=1;
+            }
+
+         });
+         console.log(count);
+        //  copywithin
+        let letters1= ['a','b','c','d','r','t','u','v'];
+        letters1.copyWithin(1,4,-2);
+        console.log(letters1);
+        //   Map
+        let mArray=[1,2,3,4,5];
+        function fn(value,index){ return {ind: index, val:value}};
+        let newmArray=mArray.map(fn);
+        console.log(newmArray);
+        const products= [
+            { name:'laptop',
+            price:15000,
+            count:5 
+        },
+        { name:'laptop',
+            price:1500,
+            count:3
+        },
+        { name:'laptop',
+            price:5000,
+            count:2
+        }
+        ]
+        let newTotal=products.map(item  =>
+        { return{sname: item.name , itemTotal:item.price*item.count}});
+        console.log(newTotal);
+        // filter
+        let number2=[2,6,8,3,4,5];
+                 number3=number2.filter(value =>{ if(value%2==0){
+                    console.log(value);
+                    
+                }});
+                // console.log(number3);
+               console.log(number3.length);
+    </script>
+</body>
+</html>
