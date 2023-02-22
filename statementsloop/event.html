@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Document</title>
+    <style>
+        #btn{
+            color: red;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+
+</head>
+<body >
+    <h1>This is my Heading</h1>
+    <div id="para1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, qui provident. Ullam explicabo alias aliquid doloribus aliquam, dolorum deleniti perspiciatis itaque nam reprehenderit, velit eius ea rem cupiditate consequatur quis.
+    </div>
+ <button id="btn" onclick="hide()" >Show/Hide</button> 
+ <button id="btn1">Stop</button> 
+</body>
+
+ <script> 
+ function onLoad(){
+    console.log("Page is loaded");
+ }
+   let body=document.querySelector("body");
+   console.log(body);
+window.addEventListener('load',() => {console.log("Page is loaded");})
+
+      let para1=document.getElementById('para1');
+      let abc= ()=>{
+        console.log("Mouse Inside")
+      }
+      para1.addEventListener('mouseover',abc);
+      para1.addEventListener('mouseout', function run(){
+        console.log("Mouse Outside");
+      });
+
+
+    function hide(){
+        let btn=document.getElementById("btn");
+        let para1=document.getElementById('para1');
+        if(para1.style.display !='none')
+        {
+            para1.style.display='none';
+        }
+        else
+        {
+            para1.style.display="block";
+        }
+        // para1.style.color='blue'
+    }
+
+    let btn=document.getElementById('btn');
+    btn.addEventListener('click', () => {console.log(1);})
+    btn.addEventListener('mouseover', () => {console.log(2);})
+     
+    // setTimeout(() =>{console.log("This is first messgae")} ,1000, "diya");
+    // setTimeout(() =>{console.log(This is second messgae)} ,5000, "abc");
+     let a=setInterval(() =>{console.log('This is third messgae')} ,2000, "xyz");
+
+    // clearInterval(a);
+    btn1.addEventListener('click',function (){
+        clearInterval(a)
+    });
+ </script>  
+
+</html>

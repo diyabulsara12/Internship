@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //  fetch('http://localhost:3000/table')
+    //     .then((response) => response.json() ) 
+    //     .then( (data) => {
+    //       localStorage.setItem("data",JSON.stringify(data))});
+    //     // console.log(getData);
+
+    //     let diya = localStorage.getItem("data");
+    //     // console.log(diya);
+    //     let diyaben = JSON.parse(diya);
+//         async function postData(url, data) {
+ 
+//   const response = await fetch(url, {
+//     method: 'POST',
+  
+//     headers: {
+//       'Content-Type': 'application/json'
+    
+//     },
+
+//     body: JSON.stringify(data) 
+//   });
+//   return response.json(); 
+// }
+
+// postData('http://localhost:3000/table', {
+//       "title": "json-server",
+//       "author": "typicode"
+//     })
+//   .then((data) => {
+//     console.log(data); // JSON data parsed by `data.json()` call
+//   });
+
+
+// fetch('http://localhost:3000/table/4', {
+//   method: 'DELETE',
+// })
+// .then(res => res.json()) // or 
+// .then(res => console.log(res)).catch(err=>console.error(err))
+fetch('http://localhost:3000/table/2',{
+method: "PUT",
+body: JSON.stringify({
+  "title": "abc",
+      "author": "viren",
+      "id": 2
+}),
+headers: {
+"Content-type": "application/json; charset=UTF-8"
+}
+})
+.then(response => response.json())
+.then(json => console.log(json));
+
+fetch('http://localhost:3000/table/2',{
+method: "PATCH",
+body: JSON.stringify({
+  "title": "XYZ",
+      
+}),
+headers: {
+"Content-type": "application/json; charset=UTF-8"
+}
+})
+.then(response => response.json())
+.then(json => console.log(json));
+
+
+
+
+
+
+
+
+  // let table=document.createElement("table");
+  //        console.log(table);
+
+
+  //        function thead(table,employee)
+  //        {
+  //           let thead=table.createTHead();
+  //           let trow=thead.insertRow();
+             
+  //           for (const key in employee[0]) {
+  //              let th=document.createElement("th");
+  //              trow.appendChild(th);
+  //              let text=document.createTextNode(key);
+  //              th.appendChild(text);
+  //           }
+  //        }
+  //        thead(table,diyaben);
+  //         function tbody(table,employee)
+  //         {
+  //           let tbody=table.createTBody();
+  //           for (const iterator of employee) {
+  //             let brow=tbody.insertRow();
+              
+  //             for (const key in iterator) {
+  //               let td=brow.insertCell();
+  //               let text1 = document.createTextNode(iterator[key]) ;
+  //               td.appendChild(text1); 
+  //             }
+  //           }
+  //         }
+  //         tbody(table,diyaben);
+  //          let body= document.querySelector("body");
+  //          body.appendChild(table)
+
+    
+
+    </script>
+</body>
+
+</html>
