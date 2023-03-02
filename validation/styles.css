@@ -9,6 +9,8 @@ body{
     justify-content:center;
 }
 .container {
+  
+  height: 100%;
   width: 30%;    
   margin-top: 50px;
   border-radius: 5px;
@@ -25,6 +27,8 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-left: 30px;
+    flex-basis: 70%;
   }
   input[type=submit] {
     
@@ -42,16 +46,22 @@ input {
   span{
     color: red;
   }
-/*   
+  .input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   
 label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
+  /* padding: 12px 12px 12px 0;
+  display: inline-block; */
+  flex-basis: 30%;
 }
-.col-25 {
+/* .col-25 {
   float: left;
   width: 25%;
   margin-top: 6px;
-} */
+} */ 
 /* .field-error{
   border-color:red;
 }

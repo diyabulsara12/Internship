@@ -1,0 +1,72 @@
+.table{
+    margin: 0 auto;
+    /* height: 100%; */
+    width: 100%;
+    margin-top: 50px ;
+    
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    text-align: center;
+    
+  }
+  .emp-tr{
+    border: 1px solid #ddd;
+padding: 8px;
+}
+.emp-td{
+border: 1px solid #ddd;
+padding: 8px;
+}
+.emp-th{
+text-align: center;
+border: 1px solid #ddd;
+padding: 8px;
+padding-top: 12px;
+padding-bottom: 12px;
+background-color:  #405cf5;
+color: white;
+}
+.click-btn{
+background-color: #405cf5;
+border-radius: 6px;
+border-width: 0;
+box-sizing: border-box;
+color: #fff;
+cursor: pointer;
+font-family:sans-serif;
+font-size: 100%;
+height: 44px;
+/* margin-right: 10px; */
+margin: 10px 10px ;
+padding: 0 25px;
+text-align: center;
+}
+
+
+.emp-tr:nth-child(even){background-color: #f2f2f2;}
+.emp-tr:hover {background-color: #ddd;}
+/* form css  */
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  

@@ -1,14 +1,3 @@
 {
-  "table": [
-    {
-      "title": "json-server",
-      "author": "typicode",
-      "id": 1
-    },
-    {
-      "title": "XYZ",
-      "author": "viren",
-      "id": 2
-    }
-  ]
+  "table": [ ]
 }

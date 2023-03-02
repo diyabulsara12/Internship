@@ -12,169 +12,39 @@
 <body>
     <div class="container">
     <form action="" name="form">
-        
+        <div class="input-container">
              <label for="">FirstName*:</label>
              <input type="text"  name="fname" id="fname" placeholder="Enter First Name" ><br> <br> 
-             <span id="name"></span><br>
+             <span id="empfname"></span><br>
+         </div>
+    <div class="input-container">
         <label for="">Last Name*:</label> <input type="text" placeholder="Enter Last Name" id="lname" ><br><br> 
         <span id="lastName"></span><br>
-         <label for="">Phone Number</label><input type="number" id="phno" name="phno"placeholder="Enter Phone Number" ><br><br> 
+    </div>
+    <div class="input-container">
+         <label for="">Phone Number</label><input type="number" id="phno" name="phno" placeholder="Enter Phone Number" maxlength="10" ><br><br> 
          <span id="phoneNo"></span><br>
+    </div>
+<div class="input-container">
          <label for="">Email*</label><input type="email" placeholder="Enter Email" id="mail"><br><br>
-         <span id="email-add"></span><br>
+         <span id="emailadd"></span><br>
+        </div>
+    <div class="input-container">
          <label for="">Organization-Email*</label><input type="email" placeholder="Enter Email" id="orgmail"><br><br>
-         <span id="org-email"></span><br>
+         <span id="orgemail"></span><br>
+    </div>
+<div class="input-container">
         <label for="">Password*:</label><input type="password" placeholder="Enter Password" id="pwd"><br><br>
         <span id="password"></span><br>
+    </div>
+<div class="input-container">
         <label for="">Salary</label><input type="number" placeholder="Enter Salary" id="emp-salary" ><br><br> 
         <span id="salary"></span><br>
+    </div>
         <input type="submit" name="submit" id='submit-btn'>
     </form>
     </div>
-    <script>
-
-        let  submitButton=document.getElementById("submit-btn");
-        submitButton.addEventListener("click",(event) => { 
-            event.preventDefault();
-            let firstname=document.getElementById('fname').value;
-            let empname=document.getElementById("fname");
-                var regex=/^[0-9a-zA-Z]+$/;
-                if(firstname==="")
-                {
-                    document.getElementById("name").innerHTML="This is Required field"
-                    empname.style.border="1px solid red ";
-                }
-        
-                else if(!firstname.match(regex))
-                {
-                    
-                    document.getElementById("name").innerHTML="Enter Valid input"
-                    empname.style.border="1px solid red ";
-                }
-                else{
-                    document.getElementById("name").innerHTML=""
-                    empname.style.border="none";
-                   
-                }
-
-                let lastname=document.getElementById("lname").value;
-                let emplastname=document.getElementById('lname');
-                if(lastname==="")
-                {
-                    document.getElementById("lastName").innerHTML="This is Required field"
-                    emplastname.style.border="1px solid red ";
-                }
-                   
-        
-                else if(!lastname.match(regex)){
-                    document.getElementById("lastName").innerHTML="Please Enter Valid input"
-                    emplastname.style.border="1px solid red ";
-                    
-                }
-                else{
-                    document.getElementById("lastName").innerHTML=""
-                    emplastname.style.border="none";
-                    
-                }
-                
-               let phoneNum=document.getElementById("phno").value;
-               let empphone=document.getElementById("phno")
-               let regex2=/^[89][0-9]{9}$/;
-               if(phoneNum==="")
-                {
-                    document.getElementById("phoneNo").innerHTML="This is Required field"
-                    empphone.style.border="1px solid red ";
-                   
-                }
-               else if(!phoneNum.match(regex2))
-               {
-                document.getElementById("phoneNo").innerHTML="enter valid Input"
-                empphone.style.border="1px solid red ";
-                 
-               }
-               else{
-                document.getElementById("phoneNo").innerHTML=""
-                empphone.style.border="none";
-               
-               }
-               let email=document.getElementById("mail").value;
-               let empemail=document.getElementById("mail");
-
-            //    regex3=/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
-            regex3=/^([A-Za-z0-9_\-\.])+\@([gmail|GMAIL])+\.(com|in)/;
-               if(email==""){
-                document.getElementById("email-add").innerHTML="This is required filed"
-                // empemail.style.border="1px solid red";
-               }
-              
-               else if(!email.match(regex3)){
-                document.getElementById("email-add").innerHTML="Enter valid email"
-                empemail.style.border="1px solid red"
-               }
-               else{
-
-                document.getElementById("email-add").innerHTML="gmail accepted"
-                // empmail.style.border="none";
-               }
-               let orgemail=document.getElementById("orgmail").value;
-               let emporgemail=document.getElementById("orgmail");
-               
-               regex4=/^([a-zA-Z\_.\0-9s]+)@1Rivet\.(com)$/;
-               if(orgemail==""){
-                document.getElementById("org-email").innerHTML="This is required filed"
-                emporgemail.style.border="1px solid red"
-               }
-              
-               else if(!orgemail.match(regex4)){
-                document.getElementById("org-email").innerHTML="Please enter valid organization address"
-                emporgemail.style.border="1px solid red"
-               }
-               else{
-
-                document.getElementById("org-email").innerHTML=""
-                // empemail.style.border="none"
-               }
-                
-               let password=document.getElementById("pwd").value;
-               let emppwd=document.getElementById("pwd");
-               regex4=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]){8,16}$/;
-               if(password==="")
-               {
-                document.getElementById("password").innerHTML="This is required filed"
-                emppwd.style.border="1px solid red"
-               }
-               else if(!password.match(regex4))
-               {
-                document.getElementById("password").innerHTML="enter valid password"
-                emppwd.style.border="1px solid red"
-               }
-               else{
-                document.getElementById("password").innerHTML="passwoed accepted"
-                empemail.style.border="none"
-               }
-                let empSalary=document.getElementById("emp-salary").value;
-                let emppsalary=document.getElementById("emp-salary");
-                if(empSalary==="")
-               {
-                document.getElementById("salary").innerHTML="This is required filed"
-                emppsalary.style.border="1px solid red"
-               }
-                else if(empSalary>=5000)
-                {
-                    document.getElementById("salary").innerHTML=""
-                    // emppsalary.style.border="1px solid red"
-                }
-                else{
-                    document.getElementById("salary").innerHTML="enter Proper salary";
-                    emppsalary.style.border="1px solid red"
-                }
-
-        }
-    )
-                
-        
-        </script>
-    
+    <script src="./form.js"></script>
 </body>
 
 </html>

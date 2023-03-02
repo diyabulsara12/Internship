@@ -37,10 +37,12 @@
             let tbody=table.createTBody();
             for (const iterator of employee) {
               let brow=tbody.insertRow();
+              // console.log(iterator);
               
               for (const key in iterator) {
                 let td=brow.insertCell();
                 let text1 = document.createTextNode(iterator[key]) ;
+                console.log(iterator);
                 td.appendChild(text1); 
               }
             }
