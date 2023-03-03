@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assests/style.css">
+</head>
+<body>
+    <div class="header">
+        <button class="status-btn">Status</button>
+        <button class="add-btn">Add customer</button>
+    </div>
+  
+    
+<div class="form-container">
+    <form name="form"action="">
+ <div class="form-row">
+       <div>
+            <label for="">MAME: <span class="astric-span">*</span></label><br>
+            <input type="text"placeholder="Enter Name" name="cname" id="cname"><br>
+            <div id="cnamemessage"></div>
+        </div>
+    <div>
+            <label for="">DESCRIPTION <span class="astric-span">*</span></label>
+            <input type="text" name="cdescription" placeholder="Enter description" id="cdescription">
+            <div id="cdescmessage"></div>
+    </div>
+     <div>
+            <label for="">STATUS <span class="astric-span">*</span></label><br> 
+            <select name="status" id="status" placeholder="Select Status" required>
+                <option value=""></option>
+                <option value="Open">Open</option>
+                <option value="Error">Error</option>
+                <option value="Success">Success</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <div id="statusmessage"></div><br>  
+     </div>
+</div>
+        <div class="form-row">
+            <div>
+            <label for="">RATE <span  class="astric-span">*</span></label>
+            <input type="number" name="rate" placeholder="Enter Rate" id="rate">
+            <div id="ratemessage"></div>
+        </div>
+        <div>
+
+            <label for="">BALANCE <span class="astric-span">*</span></label>
+            <input type="number" name="balance" placeholder="Enter balance" id="balance">
+            <div id="balancemessage"></div>
+        </div>
+        <div>
+            <label for="">DEPOSIT <span class="astric-span">*</span></label>
+            <input type="number" name="deposit" placeholder="Enter deposit" id="deposit">
+            <div id="depositmessage"></div>
+        </div>
+        </div>
+        <div class="btn-row">
+            <button class="canceledit-btn" type="reset" id="cancelbtn">Cancel</button>
+            <input type="submit" value="Save" id="savebtn" name="savebtn">
+            <button class="canceledit-btn" id="updatebtn" name="updatebtn">Update</button>
+        </div>
+    </div>
+
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
